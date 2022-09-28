@@ -1,43 +1,44 @@
 #include "main.h"
-
-int is_divisible(int num, int div);
-int is_prime_number(int n);
-
 /**
- * is_divisible - Checks if a number is divisible.
- * @num: The number to be checked.
- * @div: The divisor.
- *
- * Return: If the number is divisible - 0.
- *         If the number is not divisible - 1.
- */
-int is_divisible(int num, int div)
+* is_square_root - Entry point
+* Description - A function that confirms the natural
+* square root of an input
+* *@num: the function accepts an input saved into num
+* *@squared: the function accepts an input saved into squared
+* Return: Success (integer)
+*/
+int is_square_root(int num, int squared)
 {
-	if (num % div == 0)
-		return (0);
-
-	if (div == num / 2)
-		return (1);
-
-	return (is_divisible(num, div + 1));
+	if ((squared * squared) == num)
+	{
+		return (squared);
+	}
+	else if (squared == num / 2)
+	{
+		return (-1);
+	}
+	return (is_square_root(num, squared + 1));
 }
 
+
 /**
- * is_prime_number - Checks if a number is prime.
- * @n: The number to be checked.
- *
- * Return: If the integer is not prime - 0.
- *         If the number is prime - 1.
- */
-int is_prime_number(int n)
+* _sqrt_recursion - Entry point
+* Description - A function that returns the
+* natural square root of a number
+* *@n: the function accepts an input saved into n
+* Return: Success (integer)
+*/
+int _sqrt_recursion(int n)
 {
-	int div = 2;
+	int squared = 0;
 
-	if (n <= 1)
-		return (0);
-
-	if (n >= 2 && n <= 3)
+	if (n < 0)
+	{
+		return (-1);
+	}
+	else if (n == 1)
+	{
 		return (1);
-
-	return (is_divisible(n, div));
+	}
+	return (is_square_root(n, squared));
 }
