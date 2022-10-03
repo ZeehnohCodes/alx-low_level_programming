@@ -10,7 +10,7 @@
 
 int wildcmp(char *s1, char *s2)
 {
-	return (checker(s1, s2, 0, 0, -1));
+	return ((s1, s2, 0, 0, -1));
 }
 
 /**
