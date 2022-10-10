@@ -1,6 +1,12 @@
-#ifndef PI_H
-#define PI_H
+#include <stdio.h>
 
-#define PI 3.14159265359
-
-#endif /* PI_H */
+/**
+ * main - prints the name of the file
+ *
+ * Return: always 0
+ */
+int main(void)
+{
+	printf("%s\n", _FILE_);
+	return (0);
+}
