@@ -1,13 +1,11 @@
 #include <stdio.h>
 
-void first(void) _attribute_ ((constructor));
-
 /**
- * first - prints something before main
+ * before_main - entry point
  *
- * Return: void
+ * Return: Always 0
  */
-void first(void)
+void _attribute_ ((constructor)) before_main()
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n");
