@@ -1,4 +1,4 @@
-[11:34 am, 31/10/2022] Zeehnoh: #include "main.h"
+#include "main.h"
 
 /**
  * append_text_to_file - Appends text at the end of a file.
